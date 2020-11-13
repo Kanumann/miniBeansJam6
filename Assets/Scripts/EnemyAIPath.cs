@@ -11,7 +11,8 @@ public class EnemyAIPath : AIPath
     {
         // TODO(Jonas): Override so that movement is based on accelleration, not 
         // teleportation
-         
+        nextPosition = new Vector3(0,0,0);
+        nextRotation = new Quaternion(0,0,0,0);
         // base.MovementUpdateInternal(deltaTime, out nextPosition, out nextRotation);
     
     }
