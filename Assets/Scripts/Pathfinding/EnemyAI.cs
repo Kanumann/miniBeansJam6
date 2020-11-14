@@ -1,71 +1,80 @@
-﻿using System.Collections;
-using Pathfinding;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.AI;
+
+
+// @TODO public schnittstelle zum Spawnen von gegnern mit position
 
 public class EnemyAI : MonoBehaviour
 {
+    public GameObject localTarget;
+    public float maxDistanceToHit = 1.1f;
+    public float hitStrength = 20f;
+    public float inactiveTime = 2f;
+    public float checkForRespawnInterval = 2f;
+    public float predictVelocity = 0.1f;
+
+    private Vector3 OwnPosition { 
+        get { return gameObject.transform.position; } 
+    }
+    private Vector3 TargetPosition {
+         get { return localTarget.transform.position; } 
+    }
+
+
     // TODO(Jonas): Overwrite maxDistanceToHit depending on player 
     //            :and enemy size
-    public GameObject RemotePlayer;
-    public GameObject RemoteEnemy;
-    public float maxDistanceToHit;
-    public float inactiveTime;
+    private Rigidbody remoteRigid;
+    private Vector3 initialPosition;
+    private NavMeshAgent navAgent;
 
-    private Vector3 RemoteEnemyPosition { 
-        get { return RemoteEnemy.transform.position; } 
-    }
-    private Vector3 RemotePlayerPosition {
-         get { return RemotePlayer.transform.position; } 
-    }
-    private Rigidbody RemotePlayerRigidBody {
-         get { return RemotePlayer.GetComponent<Rigidbody>(); } 
-    }
-    private Vector3 InitialAiPosition;
+    private float waitSeconds = 3f; // on first run, wait longer
 
-    private AIPath AiPathInstance; 
-    private bool CanMove { 
-        get { return AiPathInstance.canMove; }
-        set { AiPathInstance.canMove = value; }
-    }
-
-    private float checkForRespawnInterval = 2;
-    // TODO public schnittstelle zum Spawnen von gegnern mit position
     void Start() {
-        this.RemotePlayer = GameObject.FindGameObjectWithTag("Player");
-        this.RemoteEnemy = GameObject.FindGameObjectWithTag("Enemy");
-        this.InitialAiPosition = gameObject.transform.position;
-        this.AiPathInstance = gameObject.GetComponent<AIPath>();
+        remoteRigid = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody>();
+
+        initialPosition = gameObject.transform.position;
+        navAgent = gameObject.GetComponent<NavMeshAgent>();
+
         InvokeRepeating("RespawnEnemyIfFallenOff",
                         this.checkForRespawnInterval,
                         this.checkForRespawnInterval);
     }
 
     void Update() {
-        if (DistanceToPlayer() <= maxDistanceToHit) {
-            StartCoroutine(HitPlayerAndWait());
+        // wait for Hit cooldown
+        if (waitSeconds > 0)
+        {
+            waitSeconds -= Time.deltaTime;
+            return;
+        }
+
+        // tell agent to continue navigating
+        navAgent.destination = TargetPosition + remoteRigid.velocity * predictVelocity;
+
+        // Hit target if close enough
+        if (DistanceToPlayer() <= maxDistanceToHit)
+        {
+            HitPlayer();
+            waitSeconds = inactiveTime;
         }
     }
 
     private float DistanceToPlayer() {
-        return Vector3.Distance(RemotePlayerPosition, RemoteEnemyPosition);
+        return Vector3.Distance(TargetPosition, OwnPosition);
     }
 
 
-    private IEnumerator HitPlayerAndWait() {
-        // TODO improve
-        var directionToPlayer = RemotePlayerPosition - RemoteEnemyPosition;
+    private void HitPlayer() {
+        var directionToPlayer = TargetPosition - OwnPosition;
         directionToPlayer.y = 1f;
         directionToPlayer.Normalize();
-        RemotePlayerRigidBody.AddForce(directionToPlayer * 10, ForceMode.Impulse);
-        this.CanMove = false;
-        yield return new WaitForSeconds(this.inactiveTime);
-        this.CanMove = true;
+        remoteRigid.AddForce(directionToPlayer * hitStrength, ForceMode.Impulse);
     }
 
     private void RespawnEnemyIfFallenOff() {
         var y = gameObject.transform.position.y;
         if (y < -20f) {
-            gameObject.transform.position = InitialAiPosition;
+            gameObject.transform.position = initialPosition;
         }
     }
 }

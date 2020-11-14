@@ -19,7 +19,10 @@ public class EnemySpawner : MonoBehaviour
     private void AddNewRemoteEnemyToNewAI(GameObject newEnemyAI, GameObject newRemoteEnemy)
     {
         EnemyAI enemyAiInstance = newEnemyAI.GetComponent<EnemyAI>();
-        enemyAiInstance.RemoteEnemy = newRemoteEnemy;
+
+
+        // TODO Jonas fixx das mal <3
+        //enemyAiInstance.RemoteEnemy = newRemoteEnemy;
 
         SyncRemoteObject syncRemoteObject = newEnemyAI.GetComponent<SyncRemoteObject>();
         syncRemoteObject.remote_object = newRemoteEnemy.transform;
