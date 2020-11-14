@@ -450,7 +450,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 17.616, y: 114.839, z: 142.14}
 --- !u!1001 &1219118493
 PrefabInstance:
@@ -552,7 +552,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1523354994
 PrefabInstance:
@@ -668,6 +668,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71a39e4769333f947b583b99f777b0c2, type: 3}
+--- !u!1001 &5022053612959505353
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4772498777193441173, guid: 0e87afd2909ebbb44ac8d462e026d1bb, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772498777193441173, guid: 0e87afd2909ebbb44ac8d462e026d1bb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772498777193441173, guid: 0e87afd2909ebbb44ac8d462e026d1bb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 11.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772498777193441173, guid: 0e87afd2909ebbb44ac8d462e026d1bb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772498777193441173, guid: 0e87afd2909ebbb44ac8d462e026d1bb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772498777193441173, guid: 0e87afd2909ebbb44ac8d462e026d1bb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772498777193441173, guid: 0e87afd2909ebbb44ac8d462e026d1bb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772498777193441173, guid: 0e87afd2909ebbb44ac8d462e026d1bb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772498777193441173, guid: 0e87afd2909ebbb44ac8d462e026d1bb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772498777193441173, guid: 0e87afd2909ebbb44ac8d462e026d1bb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772498777193441173, guid: 0e87afd2909ebbb44ac8d462e026d1bb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5291873558373973295, guid: 0e87afd2909ebbb44ac8d462e026d1bb, type: 3}
+      propertyPath: m_Name
+      value: Prefab_Egypt_Environment_Obelisk
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0e87afd2909ebbb44ac8d462e026d1bb, type: 3}
 --- !u!1001 &9143226546012711045
 PrefabInstance:
   m_ObjectHideFlags: 0
