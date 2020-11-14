@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public Transform ball;
+    private Transform ball;
     private Vector3 initial_position;
     private Rigidbody ball_phy;
+    //private float time;
 
     private void Start()
     {
+        ball = GameObject.FindGameObjectWithTag("Player").transform;
         initial_position = ball.position;
         ball_phy = ball.GetComponent<Rigidbody>();
     }
@@ -21,5 +23,8 @@ public class GameManager : MonoBehaviour
             ball_phy.velocity = Vector3.zero;
             ball.position = initial_position;
         }
+
+        //time += Time.deltaTime;
+        //ball_phy.mass = (time + 1) / 10f;
     }
 }
