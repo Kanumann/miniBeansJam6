@@ -1,10 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class TiltController : MonoBehaviour
 {
     public float tilt_speed, rotate_speed;
+    public Transform sync;
     private Rigidbody phy;
 
     private void Awake()
@@ -12,13 +11,15 @@ public class TiltController : MonoBehaviour
         phy = GetComponent<Rigidbody>();
     }
 
-    void FixedUpdate()
+    void Update()
     {
         // Platform rotation
-        Quaternion rot = transform.rotation * Quaternion.Euler(0f, 0f, tilt_speed * -Input.GetAxis("TiltZ"));
-        rot *= Quaternion.Euler(tilt_speed * Input.GetAxis("TiltX"), 0f, 0f);
-        rot *= Quaternion.Euler(0f, rotate_speed * Input.GetAxis("Rotate"), 0f);
+        Quaternion rot = transform.rotation * Quaternion.Euler(0f, 0f, tilt_speed * -Input.GetAxis("Horizontal")); // Z
+        rot *= Quaternion.Euler(tilt_speed * Input.GetAxis("Vertical"), 0f, 0f); // X
+        rot *= Quaternion.Euler(0f, rotate_speed * Input.GetAxis("Rotate"), 0f); // Y
         phy.MoveRotation(rot);
-        phy.angularVelocity = Vector3.zero;
+
+        sync.rotation = phy.rotation;
+        sync.position = phy.position;
     }
 }
