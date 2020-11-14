@@ -4,6 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - AI
+  - Enemy
+  - EnemySpawner
   - Slowing
   - Accelerating
   - Ground
@@ -17,8 +20,8 @@ TagManager:
   - 
   - 
   - PostProcessing
+  - Player
   - Static Level
-  - 
   - 
   - 
   - 
