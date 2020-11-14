@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     public Transform ball;
     private Vector3 initial_position;
     private Rigidbody ball_phy;
+    //private float time;
 
     private void Start()
     {
@@ -21,5 +22,8 @@ public class GameManager : MonoBehaviour
             ball_phy.velocity = Vector3.zero;
             ball.position = initial_position;
         }
+
+        //time += Time.deltaTime;
+        //ball_phy.mass = (time + 1) / 10f;
     }
 }
