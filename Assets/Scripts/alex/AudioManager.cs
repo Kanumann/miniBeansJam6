@@ -1,10 +1,39 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
+
+public enum MusicState
+{
+    Start = 0,
+    Transition = 1
+}
+
+[CustomEditor(typeof(AudioManager))]
+public class AudioManagerEditor : UnityEditor.Editor
+{
+    public override void OnInspectorGUI()
+    {
+        if (GUILayout.Button("Start Parameter", EditorStyles.miniButton))
+        {
+
+            AudioManager myTarget = (AudioManager)target;
+            myTarget.SetMusicParameter(MusicState.Start);
+        }
+        if (GUILayout.Button("Transition Parameter", EditorStyles.miniButton))
+        {
+
+            AudioManager myTarget = (AudioManager)target;
+            myTarget.SetMusicParameter(MusicState.Transition);
+        }
+        DrawDefaultInspector();
+    }
+}
 
 public class AudioManager : MonoBehaviour
 {
     bool audioResumed = false;
+
     [SerializeField]
     bool debug = false;
 
@@ -157,6 +186,11 @@ public class AudioManager : MonoBehaviour
         instance.setParameterByName(parameterName, parameterValue);
         instance.start();
         instance.release();
+    }
+
+    public void SetMusicParameter(MusicState state)
+    {
+       FMODUnity.RuntimeManager.StudioSystem.setParameterByName("g_musicState", (float)state);
     }
 
     public FMOD.RESULT PostEvent(string fmodEvent, out FMOD.Studio.EventInstance musicInstance, GameObject gameObject = null)
