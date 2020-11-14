@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public Transform ball;
+    private Transform ball;
     private Vector3 initial_position;
     private Rigidbody ball_phy;
     //private float time;
 
     private void Start()
     {
+        ball = GameObject.FindGameObjectWithTag("Player").transform;
         initial_position = ball.position;
         ball_phy = ball.GetComponent<Rigidbody>();
     }
