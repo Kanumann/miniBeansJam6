@@ -8,7 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/mainmenu.unity
     guid: 49ddf22d01d59c04cb92dec68ee052fa
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/test_hexxone.unity
     guid: 2a2fe18676b5c8f4db5b02e9f32c5877
+  - enabled: 1
+    path: Assets/Scenes/mainscene.unity
+    guid: 8f28e521b49a86c4b892f9af3c30c678
   m_configObjects: {}
