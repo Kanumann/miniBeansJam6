@@ -8,11 +8,19 @@ public class GameManager : MonoBehaviour
     private Vector3 initial_position;
     private Rigidbody ball_phy;
     //private float time;
-
+    public GameObject EnemySpawnerGameObject;
+    private EnemySpawner EnemySpawnerInstance;
     private void Start()
     {
         initial_position = ball.position;
         ball_phy = ball.GetComponent<Rigidbody>();
+        this.EnemySpawnerInstance = EnemySpawnerGameObject.GetComponent<EnemySpawner>();
+        InvokeRepeating("SpawnNewEnemy", 3, 3);
+    }
+
+    private void SpawnNewEnemy(Vector3 position) {
+        Debug.LogWarning("Spawn new enemy");
+        EnemySpawnerInstance.Spawn(position, new Quaternion());
     }
 
     void Update()
