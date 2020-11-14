@@ -27,4 +27,13 @@ public class EnemySpawner : MonoBehaviour
         SyncRemoteObject syncRemoteObject = newEnemyAI.GetComponent<SyncRemoteObject>();
         syncRemoteObject.remote_object = newRemoteEnemy.transform;
     }
+
+    public void AddAiToRemoteEnemy(GameObject remoteEnemy) {
+        Destroy(remoteEnemy.GetComponent<Rigidbody>());
+        var newEnemyAI = Instantiate(EnemyAI, 
+                                     this.StaticLevel.worldToLocalMatrix * remoteEnemy.transform.position,
+                                     Quaternion.identity,
+                                     this.RemoteLevel);
+        this.AddNewRemoteEnemyToNewAI(newEnemyAI, remoteEnemy);
+    }
 }
