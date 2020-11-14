@@ -18,13 +18,13 @@ public class AudioManagerEditor : UnityEditor.Editor
         {
 
             AudioManager myTarget = (AudioManager)target;
-            myTarget.SetMusicParameter(MusicState.Start);
+            myTarget.SetGlobalParameter("g_musicState", (float)MusicState.Start);
         }
         if (GUILayout.Button("Transition Parameter", EditorStyles.miniButton))
         {
 
             AudioManager myTarget = (AudioManager)target;
-            myTarget.SetMusicParameter(MusicState.Transition);
+            myTarget.SetGlobalParameter("g_musicState", (float)MusicState.Transition);
         }
         DrawDefaultInspector();
     }
@@ -188,9 +188,9 @@ public class AudioManager : MonoBehaviour
         instance.release();
     }
 
-    public void SetMusicParameter(MusicState state)
+    public void SetGlobalParameter(string parameterName, float parameterValue)
     {
-       FMODUnity.RuntimeManager.StudioSystem.setParameterByName("g_musicState", (float)state);
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName(parameterName, parameterValue);
     }
 
     public FMOD.RESULT PostEvent(string fmodEvent, out FMOD.Studio.EventInstance musicInstance, GameObject gameObject = null)
