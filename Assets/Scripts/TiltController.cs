@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class TiltController : MonoBehaviour
 {
@@ -16,9 +14,9 @@ public class TiltController : MonoBehaviour
     void Update()
     {
         // Platform rotation
-        Quaternion rot = transform.rotation * Quaternion.Euler(0f, 0f, tilt_speed * -Input.GetAxis("TiltZ"));
-        rot *= Quaternion.Euler(tilt_speed * Input.GetAxis("TiltX"), 0f, 0f);
-        rot *= Quaternion.Euler(0f, rotate_speed * Input.GetAxis("Rotate"), 0f);
+        Quaternion rot = transform.rotation * Quaternion.Euler(0f, 0f, tilt_speed * -Input.GetAxis("Horizontal")); // Z
+        rot *= Quaternion.Euler(tilt_speed * Input.GetAxis("Vertical"), 0f, 0f); // X
+        rot *= Quaternion.Euler(0f, rotate_speed * Input.GetAxis("Rotate"), 0f); // Y
         phy.MoveRotation(rot);
 
         sync.rotation = phy.rotation;
