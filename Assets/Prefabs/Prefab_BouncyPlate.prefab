@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6008057527691542182}
   - component: {fileID: 6008057527691542202}
   m_Layer: 9
-  m_Name: Prefab_BouncyPlate1
+  m_Name: Prefab_BouncyPlate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -109,6 +109,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CollissionTag: Player
-  CollisionClip: {fileID: 8300000, guid: c10413693a6cc6447bdba8e5545203a1, type: 3}
   Bounciness: 4
   CollisionVolume: 10
+  audioEvent: event:/World/BouncyPlate

@@ -5,19 +5,18 @@ public class BouncyFeather : MonoBehaviour
 {
     // Needs to  be set in-Editor
     public string CollissionTag = "Player";
-    public AudioClip CollisionClip;
 
     public float Bounciness = 2.5f;
     public float CollisionVolume = 30f;
 
-    private AudioSource CollisionAudio;
-    private Renderer Render;
+    [SerializeField] [FMODUnity.EventRef]
+    private string audioEvent = "event:/World/BouncyPlate";
 
+    private Renderer Render;
 
     // Start is called before the first frame update
     void Start()
     {
-        CollisionAudio = gameObject.AddComponent<AudioSource>();
         Render = gameObject.GetComponent<Renderer>();
     }
 
@@ -33,7 +32,7 @@ public class BouncyFeather : MonoBehaviour
 
         // play sound
         float vol = collision.relativeVelocity.magnitude / CollisionVolume;
-        CollisionAudio.PlayOneShot(CollisionClip, Math.Min(1f, Math.Max(0.01f, vol)));
+        AudioManager.Instance.PlayOneShotParameter(audioEvent, "l_volume", vol, this.gameObject);
 
         // change visually
         Render.material.color = Color.red;
