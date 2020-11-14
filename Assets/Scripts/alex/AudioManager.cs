@@ -45,7 +45,7 @@ public class AudioManager : MonoBehaviour
     [Range(-80f, 0f)]
     private float sfxVolume;
 
-    private FMOD.Studio.EventInstance musicInstance, ambienceInstance;
+    private FMOD.Studio.EventInstance musicInstance, ambienceInstance, pauseSnapshot;
 
     private static AudioManager instance;
     public static AudioManager Instance
@@ -107,7 +107,6 @@ public class AudioManager : MonoBehaviour
         {
             return false;
         }
-
 
         return true;
     }
@@ -210,6 +209,21 @@ public class AudioManager : MonoBehaviour
         var result = instance.start();
         musicInstance = instance;
         return result;
+    }
+
+    IEnumerator PauseAudio()
+    {
+        pauseSnapshot = FMODUnity.RuntimeManager.CreateInstance("snapshot:/Pause");
+        pauseSnapshot.start();
+        yield return new WaitForSecondsRealtime(0.12f);
+        FMODUnity.RuntimeManager.GetBus("bus:/AudioMaster").setPaused(true);
+        yield break;
+    }
+
+    void UnpauseAudio()
+    {
+        FMODUnity.RuntimeManager.GetBus("bus:/AudioMaster").setPaused(false);
+        pauseSnapshot.release();
     }
 
     float dBToLinear(float dB)
