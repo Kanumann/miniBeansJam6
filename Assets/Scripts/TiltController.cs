@@ -5,6 +5,7 @@ using UnityEngine;
 public class TiltController : MonoBehaviour
 {
     public float tilt_speed, rotate_speed;
+    public Transform sync;
     private Rigidbody phy;
 
     private void Awake()
@@ -19,5 +20,8 @@ public class TiltController : MonoBehaviour
         rot *= Quaternion.Euler(tilt_speed * Input.GetAxis("TiltX"), 0f, 0f);
         rot *= Quaternion.Euler(0f, rotate_speed * Input.GetAxis("Rotate"), 0f);
         phy.MoveRotation(rot);
+
+        sync.rotation = phy.rotation;
+        sync.position = phy.position;
     }
 }
