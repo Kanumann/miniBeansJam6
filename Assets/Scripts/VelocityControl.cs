@@ -30,7 +30,6 @@ public class VelocityControl : MonoBehaviour
         if (ct == ControlType.None) return;
 
         float velo = TargetBody.velocity.magnitude;
-        Debug.Log("Current Velocity: " + velo);
 
         float target = velo;
         switch (ct)
@@ -49,19 +48,16 @@ public class VelocityControl : MonoBehaviour
         float mult = (target + diff) / velo;
 
         TargetBody.velocity *= mult;
-        Debug.Log("New Velocity: " + mult + " => " + TargetBody.velocity.magnitude);
     }
 
     void OnTriggerEnter(Collider collider)
     {
         if (collider.tag == "Slowing") ct = ControlType.Slowing;
         if (collider.tag == "Accelerating") ct = ControlType.Accelerating;
-        Debug.Log("Control Type: " + ct);
     }
 
     void OnTriggerExit(Collider collider)
     {
         ct = ControlType.None;
-        Debug.Log("Control Type: " + ct);
     }
 }
