@@ -15,10 +15,10 @@ public class TiltController : MonoBehaviour
     void FixedUpdate()
     {
         // Platform rotation
-        Quaternion rot = transform.rotation * Quaternion.Euler(0f, 0f, tilt_speed * -Input.GetAxis("TiltZ"));
-        rot *= Quaternion.Euler(tilt_speed * Input.GetAxis("TiltX"), 0f, 0f);
+        Quaternion rot = Quaternion.AngleAxis(tilt_speed * -Input.GetAxis("TiltZ"), Vector3.forward);
+        rot *= Quaternion.AngleAxis(tilt_speed * Input.GetAxis("TiltX"), Vector3.right);
         rot *= Quaternion.Euler(0f, rotate_speed * Input.GetAxis("Rotate"), 0f);
-        phy.MoveRotation(rot);
+        phy.MoveRotation(rot * transform.rotation);
         phy.angularVelocity = Vector3.zero;
     }
 }
