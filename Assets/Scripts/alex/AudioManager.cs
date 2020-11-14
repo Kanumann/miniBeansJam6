@@ -45,7 +45,7 @@ public class AudioManager : MonoBehaviour
     [Range(-80f, 0f)]
     private float sfxVolume;
 
-    private FMOD.Studio.EventInstance musicInstance;
+    private FMOD.Studio.EventInstance musicInstance, ambienceInstance;
 
     private static AudioManager instance;
     public static AudioManager Instance
@@ -108,6 +108,7 @@ public class AudioManager : MonoBehaviour
             return false;
         }
 
+
         return true;
     }
 
@@ -158,6 +159,11 @@ public class AudioManager : MonoBehaviour
     private bool StartMusic()
     {
         if (!CheckError(PostEvent("event:/2D/Music", out musicInstance)))
+        {
+            return false;
+        }
+
+        if (!CheckError(PostEvent("event:/2D/Ambience", out ambienceInstance)))
         {
             return false;
         }
