@@ -16,12 +16,6 @@ public class GameManager : MonoBehaviour
         initial_position = ball.position;
         ball_phy = ball.GetComponent<Rigidbody>();
         this.EnemySpawnerInstance = EnemySpawnerGameObject.GetComponent<EnemySpawner>();
-        InvokeRepeating("SpawnNewEnemy", 3, 3);
-    }
-
-    private void SpawnNewEnemy(Vector3 position) {
-        Debug.LogWarning("Spawn new enemy");
-        EnemySpawnerInstance.Spawn(position, new Quaternion());
     }
 
     void Update()
