@@ -202,53 +202,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7930073807451585652}
     m_Modifications:
-    - target: {fileID: 3188498828626738638, guid: 5edf5829d6fd939419f6408c0dc62571, type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 3188498828626738638, guid: 5edf5829d6fd939419f6408c0dc62571, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3188498829727472686, guid: 5edf5829d6fd939419f6408c0dc62571, type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 3188498829727472686, guid: 5edf5829d6fd939419f6408c0dc62571, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3300263051468379809, guid: 5edf5829d6fd939419f6408c0dc62571, type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 3300263051468379809, guid: 5edf5829d6fd939419f6408c0dc62571, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3300263051896765113, guid: 5edf5829d6fd939419f6408c0dc62571, type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 3300263051896765113, guid: 5edf5829d6fd939419f6408c0dc62571, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3300263052029424205, guid: 5edf5829d6fd939419f6408c0dc62571, type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 3300263052029424205, guid: 5edf5829d6fd939419f6408c0dc62571, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4327941200197113142, guid: 5edf5829d6fd939419f6408c0dc62571, type: 3}
       propertyPath: m_Name
       value: Prefab_Egypt_Environment_Pillar001
-      objectReference: {fileID: 0}
-    - target: {fileID: 4327941200197113142, guid: 5edf5829d6fd939419f6408c0dc62571, type: 3}
-      propertyPath: m_Layer
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4327941200197113143, guid: 5edf5829d6fd939419f6408c0dc62571, type: 3}
       propertyPath: m_RootOrder
