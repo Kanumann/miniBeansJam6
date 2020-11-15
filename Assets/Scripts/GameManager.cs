@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     public GameObject UIScriptHolder;
 
 
-    private IngameUI ingameUI;
+    public IngameUI ingameUI;
 
     private void Start()
     {
@@ -23,6 +23,8 @@ public class GameManager : MonoBehaviour
 
         // get ingame ui control script
         ingameUI = UIScriptHolder.GetComponent<IngameUI>();
+
+        StartGame();
     }
 
     public GameObject RegisterNewEnemy(GameObject newRemoteEnemy)

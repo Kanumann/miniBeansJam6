@@ -22,9 +22,13 @@ public class ZoneScript : MonoBehaviour
     void Update()
     {
         time += Time.deltaTime;
-        // UI Timer updaten
+        gameManager.ingameUI.ZoneValue = zone_reach_time - time;
+
         if ((ball.position - zone.position).magnitude < DEFAULT_OBJ_RADIUS) OnZoneReached();
-        //if (time > zone_reach_time) gameManager.EndGame(); TODO
+        if (time > zone_reach_time)
+        {
+            gameManager.EndGame();
+        }
     }
 
     void SpawnZone(Vector2 position, float radius)
