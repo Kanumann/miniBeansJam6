@@ -273,7 +273,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 31
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: -31.768, y: -35.975, z: 56.461}
 --- !u!1001 &759551528
 PrefabInstance:
@@ -1725,6 +1725,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00b79838aff299047834f4c824c09452, type: 3}
+--- !u!1001 &4911977840844196545
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3583998937648879607, guid: a78ff24ee9bb7ba48941d12799334bb1, type: 3}
+      propertyPath: m_RootOrder
+      value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 3583998937648879607, guid: a78ff24ee9bb7ba48941d12799334bb1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 3583998937648879607, guid: a78ff24ee9bb7ba48941d12799334bb1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3583998937648879607, guid: a78ff24ee9bb7ba48941d12799334bb1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 3583998937648879607, guid: a78ff24ee9bb7ba48941d12799334bb1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3583998937648879607, guid: a78ff24ee9bb7ba48941d12799334bb1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3583998937648879607, guid: a78ff24ee9bb7ba48941d12799334bb1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3583998937648879607, guid: a78ff24ee9bb7ba48941d12799334bb1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3583998937648879607, guid: a78ff24ee9bb7ba48941d12799334bb1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3583998937648879607, guid: a78ff24ee9bb7ba48941d12799334bb1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3583998937648879607, guid: a78ff24ee9bb7ba48941d12799334bb1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4248931461861739853, guid: a78ff24ee9bb7ba48941d12799334bb1, type: 3}
+      propertyPath: m_Name
+      value: Prefab_Egypt_Environment_Urn
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a78ff24ee9bb7ba48941d12799334bb1, type: 3}
 --- !u!1001 &5022053612959505353
 PrefabInstance:
   m_ObjectHideFlags: 0
