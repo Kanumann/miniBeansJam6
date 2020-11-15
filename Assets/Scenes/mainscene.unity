@@ -286,7 +286,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 546497968}
-  m_LocalRotation: {x: 0.46291432, y: -1e-45, z: 0, w: 0.886403}
+  m_LocalRotation: {x: 0.46291432, y: 1e-45, z: -0, w: 0.886403}
   m_LocalPosition: {x: 0, y: 60.5, z: -28.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -455,6 +455,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8537201773300887230, guid: 0064fddee6aee764fb048cf9b7523a45, type: 3}
   m_PrefabInstance: {fileID: 1584584339}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1639531643 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1757494853, guid: 0064fddee6aee764fb048cf9b7523a45, type: 3}
+  m_PrefabInstance: {fileID: 1584584339}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639531641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd10bf039f278cc4ea6271dc8e73a5e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1921413212
 GameObject:
   m_ObjectHideFlags: 19
@@ -506,6 +517,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 153252667, guid: fb8cb56cce1de4d42a8d1971ce497a90, type: 3}
+      propertyPath: ingameUI
+      value: 
+      objectReference: {fileID: 1639531643}
     - target: {fileID: 153252667, guid: fb8cb56cce1de4d42a8d1971ce497a90, type: 3}
       propertyPath: UIScriptHolder
       value: 
@@ -637,7 +652,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8088933757050833845, guid: a9216c586789ef84ab14cfa2cd4e6285, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -1e-45
+      value: 1e-45
       objectReference: {fileID: 0}
     - target: {fileID: 8088933757050833845, guid: a9216c586789ef84ab14cfa2cd4e6285, type: 3}
       propertyPath: m_LocalRotation.z
