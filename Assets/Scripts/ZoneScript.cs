@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ZoneScript : MonoBehaviour
 {
@@ -9,7 +10,8 @@ public class ZoneScript : MonoBehaviour
 
     private const float DEFAULT_OBJ_RADIUS = 5f;
     private Transform ball;
-    public float time;
+    private float time;
+
     private GameManager gameManager;
 
     private void Start()
@@ -25,10 +27,7 @@ public class ZoneScript : MonoBehaviour
         gameManager.ingameUI.ZoneValue = zone_reach_time - time;
 
         if ((ball.position - zone.position).magnitude < DEFAULT_OBJ_RADIUS) OnZoneReached();
-        if (time > zone_reach_time)
-        {
-            gameManager.EndGame();
-        }
+        if(time > zone_reach_time) gameManager.EndGame(); 
     }
 
     void SpawnZone(Vector2 position, float radius)
@@ -50,6 +49,8 @@ public class ZoneScript : MonoBehaviour
             new_pos = Random.insideUnitCircle * zone_spawn_area_radius;
             current_local_pos = new Vector2(zone.localPosition.x, zone.localPosition.z);
         }
+
+        AudioManager.Instance.PlayOneShot("event:/World/Trigger", this.gameObject);
 
         // Spawn new
         SpawnZone(new_pos, zone_radius);

@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject UIScriptHolder;
 
+    public AirDropSpawner spawner1;
 
     public IngameUI ingameUI;
 
@@ -55,6 +56,8 @@ public class GameManager : MonoBehaviour
         foreach (var enemy in GameObject.FindGameObjectsWithTag("Enemy"))
             Destroy(enemy);
 
+        spawner1.enabled = false;
+
         ingameUI.Running = false;
         ingameUI.ShowIGMenu(false);
     }
@@ -63,7 +66,10 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
         ingameUI.Reset();
-        ingameUI.ShowIGMenu();
+        ingameUI.ShowIGMenu(true);
         ingameUI.Running = true;
+
+        spawner1.enabled = true;
+
     }
 }

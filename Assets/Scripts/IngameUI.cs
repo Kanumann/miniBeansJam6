@@ -22,6 +22,8 @@ public class IngameUI : MonoBehaviour
     private TextMeshProUGUI textZone;
     private float score = 0;
 
+    private bool initFirst = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,12 +32,19 @@ public class IngameUI : MonoBehaviour
         if (list.Length > 1) throw new Exception("IngameUI error: found too many GammeManagers!");
         instance = list[0];
 
+        Init();
+        SetText();
+    }
+
+
+    void Init()
+    {
+        if(initFirst)return;
+        initFirst = true;
+
         textIG = UIText.GetComponent<TextMeshProUGUI>();
         textEnd = UIEndText.GetComponent<TextMeshProUGUI>();
-
-        // get zone
         textZone = UIZone.GetComponent<TextMeshProUGUI>();
-        SetText();
     }
 
     // Update is called once per frame
@@ -48,6 +57,8 @@ public class IngameUI : MonoBehaviour
 
     private void SetText()
     {
+        Init();
+
         string formatted = FormatTime(score);
         textIG.SetText(formatted);
         textEnd.SetText(formatted);
