@@ -789,9 +789,17 @@ PrefabInstance:
       propertyPath: m_BoxSize.z
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 2035788608995574491, guid: b8706818da81bdc4084512790b96f104, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 2238413524640657901, guid: b8706818da81bdc4084512790b96f104, type: 3}
       propertyPath: m_Name
       value: Prefab_Egypt_Level
+      objectReference: {fileID: 0}
+    - target: {fileID: 5039217454292391408, guid: b8706818da81bdc4084512790b96f104, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8105538903298612478, guid: b8706818da81bdc4084512790b96f104, type: 3}
       propertyPath: m_RootOrder
