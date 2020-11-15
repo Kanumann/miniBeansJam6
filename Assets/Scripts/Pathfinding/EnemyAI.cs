@@ -17,6 +17,10 @@ public class EnemyAI : MonoBehaviour
     public float aggressiveness { get; set; }
     // When enemy is engaging a new map target, pick a position to go to within this radius 
     public float walkRadius { get; set; }
+    public float speed { get; set; }
+
+    public float acceleration { get; set;}
+    
     
     // on first run, wait longer
     private float remainingWaitSeconds = 0f; 
@@ -46,7 +50,8 @@ public class EnemyAI : MonoBehaviour
 
         initialPosition = gameObject.transform.position;
         navAgent = gameObject.GetComponent<NavMeshAgent>();
-
+        navAgent.speed = this.speed;
+        navAgent.acceleration = this.acceleration;
         InvokeRepeating("RespawnEnemyIfFallenOff",
                         this.checkForRespawnInterval,
                         this.checkForRespawnInterval);

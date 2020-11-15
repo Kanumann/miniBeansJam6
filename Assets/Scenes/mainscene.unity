@@ -236,6 +236,8 @@ MonoBehaviour:
   initialEnemyState: 1
   walkRadius: 20
   aggressiveness: 0.5
+  speed: 18
+  acceleration: 10
 --- !u!1 &1921413212
 GameObject:
   m_ObjectHideFlags: 19

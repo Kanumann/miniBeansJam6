@@ -15,6 +15,8 @@ public class EnemyController : MonoBehaviour
     public float walkRadius = 100f;
     // likeliness of the enemy deciding to chase the player instead of a random position
     public float aggressiveness = 0.5f;
+    public float speed = 18;
+    public float acceleration = 10f;
 
     // TODO: check if those are needed 
     // readable sub-lists based on the enemy state
@@ -64,6 +66,8 @@ public class EnemyController : MonoBehaviour
         enemyAi.enemyState = initialEnemyState;
         enemyAi.walkRadius = walkRadius;
         enemyAi.aggressiveness = aggressiveness;
+        enemyAi.speed = speed;
+        enemyAi.acceleration = acceleration;
     }
 
     // TODO: check if those are needed
