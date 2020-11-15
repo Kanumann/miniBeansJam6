@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7930073807451585652}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Prefab_Egypt_Environment_PillarArc001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 7930073807451585655}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 28.88, y: -6.02, z: 5.11}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.4655, y: 1.4655, z: 1.4655}
   m_Children:
   - {fileID: 5909469879770780268}
   - {fileID: 5909469878880701844}
@@ -53,6 +53,14 @@ PrefabInstance:
     - target: {fileID: 1279880280612852361, guid: 668610f396940be4b8183f746e697d7f, type: 3}
       propertyPath: m_Name
       value: Prefab_Egypt_Environment_PillarSegment001 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1279880280612852361, guid: 668610f396940be4b8183f746e697d7f, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1279880280612852361, guid: 668610f396940be4b8183f746e697d7f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1912021004130224179, guid: 668610f396940be4b8183f746e697d7f, type: 3}
       propertyPath: m_RootOrder
@@ -128,6 +136,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prefab_Egypt_Environment_PillarSegment001 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1279880280612852361, guid: 668610f396940be4b8183f746e697d7f, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1279880280612852361, guid: 668610f396940be4b8183f746e697d7f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1912021004130224179, guid: 668610f396940be4b8183f746e697d7f, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -186,9 +202,53 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7930073807451585652}
     m_Modifications:
+    - target: {fileID: 3188498828626738638, guid: 5edf5829d6fd939419f6408c0dc62571, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3188498828626738638, guid: 5edf5829d6fd939419f6408c0dc62571, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3188498829727472686, guid: 5edf5829d6fd939419f6408c0dc62571, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3188498829727472686, guid: 5edf5829d6fd939419f6408c0dc62571, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300263051468379809, guid: 5edf5829d6fd939419f6408c0dc62571, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300263051468379809, guid: 5edf5829d6fd939419f6408c0dc62571, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300263051896765113, guid: 5edf5829d6fd939419f6408c0dc62571, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300263051896765113, guid: 5edf5829d6fd939419f6408c0dc62571, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300263052029424205, guid: 5edf5829d6fd939419f6408c0dc62571, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300263052029424205, guid: 5edf5829d6fd939419f6408c0dc62571, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4327941200197113142, guid: 5edf5829d6fd939419f6408c0dc62571, type: 3}
       propertyPath: m_Name
       value: Prefab_Egypt_Environment_Pillar001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4327941200197113142, guid: 5edf5829d6fd939419f6408c0dc62571, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4327941200197113143, guid: 5edf5829d6fd939419f6408c0dc62571, type: 3}
       propertyPath: m_RootOrder
@@ -300,6 +360,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prefab_Egypt_Environment_Block001 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1916673645237456701, guid: 659d4c12489f035499691327baed3a3f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 659d4c12489f035499691327baed3a3f, type: 3}
 --- !u!4 &9214360673507857673 stripped
@@ -317,6 +381,14 @@ PrefabInstance:
     - target: {fileID: 6218323083927955234, guid: b35033f89dd9f1a4194a3963b448cced, type: 3}
       propertyPath: m_Name
       value: Prefab_Egypt_Environment_Block006 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6218323083927955234, guid: b35033f89dd9f1a4194a3963b448cced, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6218323083927955234, guid: b35033f89dd9f1a4194a3963b448cced, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6701421436932947352, guid: b35033f89dd9f1a4194a3963b448cced, type: 3}
       propertyPath: m_RootOrder
@@ -424,6 +496,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prefab_Egypt_Environment_Block001 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1916673645237456701, guid: 659d4c12489f035499691327baed3a3f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 659d4c12489f035499691327baed3a3f, type: 3}
 --- !u!4 &9214360672626898677 stripped
@@ -441,6 +517,14 @@ PrefabInstance:
     - target: {fileID: 1279880280612852361, guid: 668610f396940be4b8183f746e697d7f, type: 3}
       propertyPath: m_Name
       value: Prefab_Egypt_Environment_PillarSegment001 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1279880280612852361, guid: 668610f396940be4b8183f746e697d7f, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1279880280612852361, guid: 668610f396940be4b8183f746e697d7f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1912021004130224179, guid: 668610f396940be4b8183f746e697d7f, type: 3}
       propertyPath: m_RootOrder
@@ -503,6 +587,14 @@ PrefabInstance:
     - target: {fileID: 5911280021203767341, guid: d3536ebe7c4df7b488c7642a6adb3075, type: 3}
       propertyPath: m_Name
       value: Prefab_Egypt_Environment_Block005
+      objectReference: {fileID: 0}
+    - target: {fileID: 5911280021203767341, guid: d3536ebe7c4df7b488c7642a6adb3075, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5911280021203767341, guid: d3536ebe7c4df7b488c7642a6adb3075, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6431920305836821143, guid: d3536ebe7c4df7b488c7642a6adb3075, type: 3}
       propertyPath: m_RootOrder
@@ -610,6 +702,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prefab_Egypt_Environment_Block001 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1916673645237456701, guid: 659d4c12489f035499691327baed3a3f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 659d4c12489f035499691327baed3a3f, type: 3}
 --- !u!4 &9214360672240369094 stripped
@@ -672,6 +768,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prefab_Egypt_Environment_Block001 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1916673645237456701, guid: 659d4c12489f035499691327baed3a3f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 659d4c12489f035499691327baed3a3f, type: 3}
 --- !u!4 &9214360672175065539 stripped
@@ -686,9 +786,53 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7930073807451585652}
     m_Modifications:
+    - target: {fileID: 3188498828626738638, guid: 5edf5829d6fd939419f6408c0dc62571, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3188498828626738638, guid: 5edf5829d6fd939419f6408c0dc62571, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3188498829727472686, guid: 5edf5829d6fd939419f6408c0dc62571, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3188498829727472686, guid: 5edf5829d6fd939419f6408c0dc62571, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300263051468379809, guid: 5edf5829d6fd939419f6408c0dc62571, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300263051468379809, guid: 5edf5829d6fd939419f6408c0dc62571, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300263051896765113, guid: 5edf5829d6fd939419f6408c0dc62571, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300263051896765113, guid: 5edf5829d6fd939419f6408c0dc62571, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300263052029424205, guid: 5edf5829d6fd939419f6408c0dc62571, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300263052029424205, guid: 5edf5829d6fd939419f6408c0dc62571, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4327941200197113142, guid: 5edf5829d6fd939419f6408c0dc62571, type: 3}
       propertyPath: m_Name
       value: Prefab_Egypt_Environment_Pillar001 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4327941200197113142, guid: 5edf5829d6fd939419f6408c0dc62571, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4327941200197113143, guid: 5edf5829d6fd939419f6408c0dc62571, type: 3}
       propertyPath: m_RootOrder
@@ -796,6 +940,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prefab_Egypt_Environment_Block001 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1916673645237456701, guid: 659d4c12489f035499691327baed3a3f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 659d4c12489f035499691327baed3a3f, type: 3}
 --- !u!4 &9214360671632817150 stripped
@@ -865,6 +1013,10 @@ PrefabInstance:
     - target: {fileID: 3238716949259671309, guid: 3186116c8ddc6554c91f301c3994be1d, type: 3}
       propertyPath: m_Name
       value: Prefab_Egypt_Environment_Block007 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3238716949259671309, guid: 3186116c8ddc6554c91f301c3994be1d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3186116c8ddc6554c91f301c3994be1d, type: 3}

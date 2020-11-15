@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5291873558373973295
+--- !u!1 &5685971669046942547
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,47 +8,45 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4772498777193441173}
-  - component: {fileID: 8472548322879924272}
-  - component: {fileID: 5940387024866778362}
-  - component: {fileID: 6168894034086245488}
-  - component: {fileID: 505667739997379528}
-  m_Layer: 10
-  m_Name: Prefab_Egypt_Environment_Obelisk
+  - component: {fileID: 5017979441063264745}
+  - component: {fileID: 8218130484606340684}
+  - component: {fileID: 6190300405031107206}
+  m_Layer: 0
+  m_Name: Prefab_Egypt_Enemy_Scarab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4772498777193441173
+--- !u!4 &5017979441063264745
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5291873558373973295}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.46, y: 11.94, z: -7.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_GameObject: {fileID: 5685971669046942547}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: -0.029509, z: -0.0084168}
+  m_LocalScale: {x: 1.3084109, y: 1.3084109, z: 1.3084109}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &8472548322879924272
+--- !u!33 &8218130484606340684
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5291873558373973295}
-  m_Mesh: {fileID: 7807538432633192378, guid: 313c358893c34b243a0e84ca27cb5131, type: 3}
---- !u!23 &5940387024866778362
+  m_GameObject: {fileID: 5685971669046942547}
+  m_Mesh: {fileID: -6256984568795259665, guid: 67b41cee1b1a20248aaf7e685a7effd6, type: 3}
+--- !u!23 &6190300405031107206
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5291873558373973295}
+  m_GameObject: {fileID: 5685971669046942547}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -61,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c30c67b44a8d9514a94a8470675dbd67, type: 2}
+  - {fileID: 2100000, guid: bd71c5db210e9c247ab4a10390366dd0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -83,29 +81,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6168894034086245488
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5291873558373973295}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.6818632, y: 0.44262886, z: 1.6818632}
-  m_Center: {x: 0, y: 0.20912266, z: 0}
---- !u!65 &505667739997379528
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5291873558373973295}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.4, y: 4.969412, z: 1.24}
-  m_Center: {x: 0, y: 2.9207335, z: 0}
