@@ -157,6 +157,9 @@ public class AudioManager : MonoBehaviour
 
     private bool StartMusic()
     {
+
+        PlayOneShot("event:/UI/PlayStart");
+
         if (!CheckError(PostEvent("event:/2D/Music", out musicInstance)))
         {
             return false;
