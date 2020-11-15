@@ -46,6 +46,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prefab_Egypt_Environment_Pillar001
       objectReference: {fileID: 0}
+    - target: {fileID: 1279880280612852361, guid: 668610f396940be4b8183f746e697d7f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1912021004130224179, guid: 668610f396940be4b8183f746e697d7f, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -107,6 +111,10 @@ PrefabInstance:
     - target: {fileID: 1279880280612852361, guid: 668610f396940be4b8183f746e697d7f, type: 3}
       propertyPath: m_Name
       value: Prefab_Egypt_Environment_Pillar001 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1279880280612852361, guid: 668610f396940be4b8183f746e697d7f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1912021004130224179, guid: 668610f396940be4b8183f746e697d7f, type: 3}
       propertyPath: m_RootOrder
@@ -170,6 +178,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prefab_Egypt_Environment_Pillar002
       objectReference: {fileID: 0}
+    - target: {fileID: 1166499775651915939, guid: 2c77201d9aa22214bb65587e248def6f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1980438080720368153, guid: 2c77201d9aa22214bb65587e248def6f, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -232,6 +244,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prefab_Egypt_Environment_Pillar001 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1279880280612852361, guid: 668610f396940be4b8183f746e697d7f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1912021004130224179, guid: 668610f396940be4b8183f746e697d7f, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -293,6 +309,10 @@ PrefabInstance:
     - target: {fileID: 1166499775651915939, guid: 2c77201d9aa22214bb65587e248def6f, type: 3}
       propertyPath: m_Name
       value: Prefab_Egypt_Environment_Pillar002 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1166499775651915939, guid: 2c77201d9aa22214bb65587e248def6f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1980438080720368153, guid: 2c77201d9aa22214bb65587e248def6f, type: 3}
       propertyPath: m_RootOrder

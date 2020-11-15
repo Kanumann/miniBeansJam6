@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8224186206716481368
+--- !u!1 &3137982749176813683
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,46 +8,45 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8748802359509947874}
-  - component: {fileID: 5676267200478943815}
-  - component: {fileID: 7575848112412913293}
-  - component: {fileID: 2881190982273934012}
+  - component: {fileID: 8207953891888973741}
+  - component: {fileID: 5306914179851226802}
+  - component: {fileID: 6306540159865629683}
   m_Layer: 10
-  m_Name: Prefab_Egypt_Environment_Temple
+  m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 1
   m_IsActive: 1
---- !u!4 &8748802359509947874
+--- !u!4 &8207953891888973741
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8224186206716481368}
+  m_GameObject: {fileID: 3137982749176813683}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.3325, y: 1.3325, z: 1.3325}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 8748802359509947874}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &5676267200478943815
+--- !u!33 &5306914179851226802
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8224186206716481368}
+  m_GameObject: {fileID: 3137982749176813683}
   m_Mesh: {fileID: -275492642485929324, guid: 5d2b247c0844465448b60ef6bf9fe769, type: 3}
---- !u!23 &7575848112412913293
+--- !u!23 &6306540159865629683
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8224186206716481368}
+  m_GameObject: {fileID: 3137982749176813683}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -82,6 +81,41 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &8224186206716481368
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8748802359509947874}
+  - component: {fileID: 2881190982273934012}
+  - component: {fileID: 6391563843973848180}
+  - component: {fileID: 6437714349244263961}
+  - component: {fileID: 2501682107555279015}
+  m_Layer: 10
+  m_Name: Prefab_Egypt_Environment_Temple
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8748802359509947874
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8224186206716481368}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.3325, y: 1.3325, z: 1.3325}
+  m_Children:
+  - {fileID: 8207953891888973741}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &2881190982273934012
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -93,5 +127,44 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.752068, y: 1.9830066, z: 2.0074646}
-  m_Center: {x: 0, y: 0.97623116, z: 0.0037323236}
+  m_Size: {x: 0.6146779, y: 1.9829955, z: 2.0074646}
+  m_Center: {x: 1.0686946, y: 0.9762214, z: 0.0037330536}
+--- !u!65 &6391563843973848180
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8224186206716481368}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6128829, y: 1.9829962, z: 2.0074656}
+  m_Center: {x: -1.0695922, y: 0.9762221, z: 0.0037304568}
+--- !u!65 &6437714349244263961
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8224186206716481368}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.7520688, y: 1.9829986, z: 0.6048163}
+  m_Center: {x: -0.0000001537072, y: 0.9762229, z: -0.69759315}
+--- !u!65 &2501682107555279015
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8224186206716481368}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.7520688, y: 0.5154845, z: 2.0074656}
+  m_Center: {x: 0.000000034025387, y: 1.7099816, z: 0.0037321274}
