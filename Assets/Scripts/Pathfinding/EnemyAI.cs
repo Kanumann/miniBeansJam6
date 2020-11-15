@@ -6,7 +6,6 @@ using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
-    public GameObject localTarget;
     public float maxDistanceToHit = 1.1f;
     public float hitStrength = 20f;
     public float inactiveTime = 2f;
@@ -14,8 +13,10 @@ public class EnemyAI : MonoBehaviour
     public float predictVelocity = 0.1f;
 
     private Vector3 OwnPosition { 
-        get { return gameObject.transform.position; } 
+        get { return gameObject.transform.position; }
     }
+
+    private GameObject localTarget;
     private Vector3 TargetPosition {
          get { return localTarget.transform.position; } 
     }
@@ -30,7 +31,10 @@ public class EnemyAI : MonoBehaviour
     private float waitSeconds = 3f; // on first run, wait longer
 
     void Start() {
-        remoteRigid = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody>();
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        localTarget = player.GetComponent<SyncRemoteObject>().remote_object.gameObject;
+
+        remoteRigid = player.GetComponent<Rigidbody>();
 
         initialPosition = gameObject.transform.position;
         navAgent = gameObject.GetComponent<NavMeshAgent>();

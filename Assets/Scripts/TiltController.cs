@@ -11,8 +11,11 @@ public class TiltController : MonoBehaviour
         phy = GetComponent<Rigidbody>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
+        // Fix weird platform behaviour
+        phy.angularVelocity = Vector3.zero;
+
         // Platform rotation
         Quaternion rot = transform.rotation * Quaternion.Euler(0f, 0f, tilt_speed * -Input.GetAxis("Horizontal")); // Z
         rot *= Quaternion.Euler(tilt_speed * Input.GetAxis("Vertical"), 0f, 0f); // X
