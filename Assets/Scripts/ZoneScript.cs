@@ -7,6 +7,7 @@ public class ZoneScript : MonoBehaviour
 {
     public Transform zone;
     public float y_offset = 0f, zone_spawn_area_radius = 14f, zone_radius = 5f, min_next_zone_distance = 5f, zone_reach_time = 15f;
+    public UnityEvent onZoneReached;
 
     private const float DEFAULT_OBJ_RADIUS = 5f;
     private Transform ball;
@@ -25,7 +26,7 @@ public class ZoneScript : MonoBehaviour
     {
         time += Time.deltaTime;
         // UI Timer updaten
-        if ((ball.position - zone.position).magnitude < DEFAULT_OBJ_RADIUS) OnZoneReached();
+        if ((ball.position - zone.position).magnitude < DEFAULT_OBJ_RADIUS) ZoneReached();
         //if (time > zone_reach_time) gameManager.EndGame(); TODO
     }
 
@@ -36,7 +37,7 @@ public class ZoneScript : MonoBehaviour
         zone.localScale = new Vector3(radius, radius, 1f);
     }
 
-    void OnZoneReached()
+    void ZoneReached()
     {
         // Reset time
         time = 0f;
@@ -51,5 +52,7 @@ public class ZoneScript : MonoBehaviour
 
         // Spawn new
         SpawnZone(new_pos, zone_radius);
+
+        onZoneReached.Invoke();
     }
 }
