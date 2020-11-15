@@ -17,10 +17,11 @@ public class TiltController : MonoBehaviour
         phy.angularVelocity = Vector3.zero;
 
         // Platform rotation
-        Quaternion rot = transform.rotation * Quaternion.Euler(0f, 0f, tilt_speed * -Input.GetAxis("Horizontal")); // Z
-        rot *= Quaternion.Euler(tilt_speed * Input.GetAxis("Vertical"), 0f, 0f); // X
-        rot *= Quaternion.Euler(0f, rotate_speed * Input.GetAxis("Rotate"), 0f); // Y
-        phy.MoveRotation(rot);
+        Quaternion rot = Quaternion.AngleAxis(tilt_speed * -Input.GetAxis("Horizontal"), Vector3.forward);
+        rot *= Quaternion.AngleAxis(tilt_speed * Input.GetAxis("Vertical"), Vector3.right);
+        rot *= Quaternion.Euler(0f, rotate_speed * Input.GetAxis("Rotate"), 0f);
+        phy.MoveRotation(rot * transform.rotation);
+        phy.angularVelocity = Vector3.zero;
 
         sync.rotation = phy.rotation;
         sync.position = phy.position;

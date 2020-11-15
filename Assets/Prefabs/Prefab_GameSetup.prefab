@@ -189,8 +189,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f7331f5fe06b6347a05c2f463ece3c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tilt_speed: 0.25
-  rotate_speed: 0.25
+  tilt_speed: 0.5
+  rotate_speed: 0.3
   sync: {fileID: 1719314090274746771}
 --- !u!54 &1719314089242897085
 Rigidbody:
@@ -340,7 +340,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1719314090016827632}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.81, y: 0.6, z: -3.45}
+  m_LocalPosition: {x: 0, y: 20, z: 0}
   m_LocalScale: {x: 0.55172, y: 0.55172, z: 0.55172}
   m_Children: []
   m_Father: {fileID: 1719314089801064328}
@@ -402,7 +402,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1719314090016827632}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 3fd0ec922062bac4f964f969cbd6c781, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -876,6 +876,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8193936254548632442, guid: b8706818da81bdc4084512790b96f104, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: cdd015116d0ee1a4d874256929ade10b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8706818da81bdc4084512790b96f104, type: 3}
 --- !u!4 &7467130627737379187 stripped
