@@ -8,27 +8,18 @@ public class EnemySpawner : MonoBehaviour
     public Transform RemoteLevel;
     public Transform StaticLevel;
     public GameObject EnemyAI;
-    public GameObject RemoteEnemy;
 
-    // public Transform Position;
-    // public void Spawn(Vector3 position, Quaternion rotation) {
-    //     var newEnemyAI = Instantiate(EnemyAI, position, rotation, this.RemoteLevel);
-    //     var newRemoteEnemy = Instantiate(RemoteEnemy, position, rotation, this.StaticLevel);
-    //     AddNewRemoteEnemyToNewAI(newEnemyAI, newRemoteEnemy);
-    // }
-
-    public void AddAiToRemoteEnemy(GameObject newRemoteEnemy) {
-        Destroy(newRemoteEnemy.GetComponent<Rigidbody>());
+    public GameObject AddAiToRemoteEnemy(GameObject newRemoteEnemy)
+    {
         var newEnemyAI = Instantiate(EnemyAI,
-                                     this.StaticLevel.worldToLocalMatrix * newRemoteEnemy.transform.position,
+                                     this.RemoteLevel.TransformPoint(newRemoteEnemy.transform.localPosition),
                                      Quaternion.identity,
                                      this.RemoteLevel);
-
-        // TODO Jonas fixx das mal <3
-        // EnemyAI enemyAiInstance = newEnemyAI.GetComponent<EnemyAI>();
-        // enemyAiInstance.RemoteEnemy = newRemoteEnemy;
+        newEnemyAI.name = "EnemyPathFinder";
 
         SyncRemoteObject syncRemoteObject = newEnemyAI.GetComponent<SyncRemoteObject>();
         syncRemoteObject.remote_object = newRemoteEnemy.transform;
+
+        return newEnemyAI;
     }
 }
