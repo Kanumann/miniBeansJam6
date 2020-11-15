@@ -2,26 +2,24 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UIElements;
 
 public class IngameUI : MonoBehaviour
 {
     public GameObject IGMenu;
     public GameObject UIText;
-    public GameObject UImgHeavy;
-    public GameObject UImgFeather;
-    public GameObject UImgAlarm;
+    public GameObject UIZone;
     public GameObject EndMenu;
     public GameObject UIEndText;
     public bool Running = true;
-    public int decimals = 2;
+    public int decimals = 1;
+
+    // TODO STEVEN
+    public float ZoneValue;
 
     private GameManager instance;
     private TextMeshProUGUI textIG;
     private TextMeshProUGUI textEnd;
-    private Image rImgHeavy;
-    private Image rImgFeather;
-    private Image rImgAlarm;
+    private TextMeshProUGUI textZone;
     private float score = 0;
 
     // Start is called before the first frame update
@@ -34,6 +32,9 @@ public class IngameUI : MonoBehaviour
 
         textIG = UIText.GetComponent<TextMeshProUGUI>();
         textEnd = UIEndText.GetComponent<TextMeshProUGUI>();
+
+        // get zone
+        textZone = UIZone.GetComponent<TextMeshProUGUI>();
         SetText();
     }
 
@@ -50,6 +51,9 @@ public class IngameUI : MonoBehaviour
         string formatted = FormatTime(score);
         textIG.SetText(formatted);
         textEnd.SetText(formatted);
+
+        // set zone
+        textZone.SetText(FormatTime(ZoneValue));
     }
 
     private string FormatTime(float s)
@@ -102,7 +106,7 @@ public class IngameUI : MonoBehaviour
 
     public void ButtonRetry()
     {
-        // TODO Call Gamemanager
+        instance.StartGame();
     }
 
     public void ButtonExit()
