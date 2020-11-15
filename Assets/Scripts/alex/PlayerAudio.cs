@@ -6,6 +6,7 @@ public class PlayerAudio : MonoBehaviour
 {
     FMOD.Studio.EventInstance instance;
     Rigidbody rb;
+    int numberOfEnemies;
 
     void Awake()
     {
@@ -15,6 +16,24 @@ public class PlayerAudio : MonoBehaviour
     void Start()
     {
         AudioManager.Instance.PostEvent("event:/Player/Ball Rolling", out instance, this.gameObject);
+        InvokeRepeating("CheckNumberOfEnemies", 5f, 5f);
+    }
+
+    void CheckNumberOfEnemies()
+    {
+        numberOfEnemies = GameObject.FindObjectsOfType<RemoteEnemyBehaviour>().Length;
+
+        switch (numberOfEnemies)
+        {
+            case 0:
+                AudioManager.Instance.SetGlobalParameter("g_musicState", (float)MusicState.Start);
+                break;
+            case 2:
+                AudioManager.Instance.SetGlobalParameter("g_musicState", (float)MusicState.Transition);
+                break;
+            default:
+                break;
+        }
     }
 
     // Update is called once per frame
@@ -23,6 +42,7 @@ public class PlayerAudio : MonoBehaviour
 
         _ = GroundCheck() ? AudioManager.Instance.SetGlobalParameter("g_ballSpeed", rb.velocity.magnitude)
                           : AudioManager.Instance.SetGlobalParameter("g_ballSpeed", 0f);
+
     }
 
     bool GroundCheck()
