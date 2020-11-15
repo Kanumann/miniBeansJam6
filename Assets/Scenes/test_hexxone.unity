@@ -549,17 +549,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 511907286}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &795026137 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8537201773300887360, guid: 0064fddee6aee764fb048cf9b7523a45, type: 3}
-  m_PrefabInstance: {fileID: 8537201771836435008}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd10bf039f278cc4ea6271dc8e73a5e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &840341142 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1774246036984940049, guid: 9896c1e8df24026419aff89a4c3446ea, type: 3}
@@ -1471,34 +1460,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 761232001, guid: 0064fddee6aee764fb048cf9b7523a45, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1057049573, guid: 0064fddee6aee764fb048cf9b7523a45, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 795026137}
-    - target: {fileID: 1057049573, guid: 0064fddee6aee764fb048cf9b7523a45, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ButtonRetry
-      objectReference: {fileID: 0}
-    - target: {fileID: 1057049573, guid: 0064fddee6aee764fb048cf9b7523a45, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: IngameUI, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 1847066739, guid: 0064fddee6aee764fb048cf9b7523a45, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 795026137}
-    - target: {fileID: 1847066739, guid: 0064fddee6aee764fb048cf9b7523a45, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ButtonExit
-      objectReference: {fileID: 0}
-    - target: {fileID: 1847066739, guid: 0064fddee6aee764fb048cf9b7523a45, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: IngameUI, Assembly-CSharp
-      objectReference: {fileID: 0}
     - target: {fileID: 8537201771998229176, guid: 0064fddee6aee764fb048cf9b7523a45, type: 3}
       propertyPath: m_Name
       value: Prefab_InGame_UI
@@ -1545,10 +1506,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8537201771998229177, guid: 0064fddee6aee764fb048cf9b7523a45, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8537201772412322998, guid: 0064fddee6aee764fb048cf9b7523a45, type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
