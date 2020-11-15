@@ -310,46 +310,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prefab_GameSetup
       objectReference: {fileID: 0}
-    - target: {fileID: 1719314089826969456, guid: fb8cb56cce1de4d42a8d1971ce497a90, type: 3}
-      propertyPath: m_BoxSize.x
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1719314089826969456, guid: fb8cb56cce1de4d42a8d1971ce497a90, type: 3}
-      propertyPath: m_BoxSize.z
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1719314089960012208, guid: fb8cb56cce1de4d42a8d1971ce497a90, type: 3}
-      propertyPath: m_BoxSize.x
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1719314089960012208, guid: fb8cb56cce1de4d42a8d1971ce497a90, type: 3}
-      propertyPath: m_BoxSize.z
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1719314090016827647, guid: fb8cb56cce1de4d42a8d1971ce497a90, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1719314090016827647, guid: fb8cb56cce1de4d42a8d1971ce497a90, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1719314090016827647, guid: fb8cb56cce1de4d42a8d1971ce497a90, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1719314091132083302, guid: fb8cb56cce1de4d42a8d1971ce497a90, type: 3}
-      propertyPath: m_BoxSize.x
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1719314091132083302, guid: fb8cb56cce1de4d42a8d1971ce497a90, type: 3}
-      propertyPath: m_BoxSize.z
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2655012416867375894, guid: fb8cb56cce1de4d42a8d1971ce497a90, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb8cb56cce1de4d42a8d1971ce497a90, type: 3}
 --- !u!1001 &8088933756595946564
