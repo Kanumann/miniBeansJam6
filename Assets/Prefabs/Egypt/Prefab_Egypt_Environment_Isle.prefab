@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 7518686572433604179}
   - component: {fileID: 6966050994244321457}
   - component: {fileID: 1897668974945829869}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: egypt_isle_rocks_lp.021
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &7518686572433604179
 Transform:
@@ -90,12 +90,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 111523956109618172}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Prefab_Egypt_Environment_Isle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &111523956109618172
 Transform:
@@ -145,12 +145,12 @@ GameObject:
   - component: {fileID: 2292092934755013753}
   - component: {fileID: 3961074677718651571}
   - component: {fileID: 1088231502968851091}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: egypt_isle_rocks_lp.017
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &2292092934755013753
 Transform:
@@ -226,12 +226,12 @@ GameObject:
   - component: {fileID: 2499548106560012397}
   - component: {fileID: 3870011412576801613}
   - component: {fileID: 6982595542700517981}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: egypt_isle_rocks_lp.020
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &2499548106560012397
 Transform:
@@ -307,12 +307,12 @@ GameObject:
   - component: {fileID: 1088979060079858567}
   - component: {fileID: 1958863897184153884}
   - component: {fileID: 6642399182029511329}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: egypt_isle_rocks_lp.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &1088979060079858567
 Transform:
@@ -388,12 +388,12 @@ GameObject:
   - component: {fileID: 247534810251435577}
   - component: {fileID: 6991001051978025938}
   - component: {fileID: 2216116479781141857}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: egypt_isle_rocks_lp.011
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &247534810251435577
 Transform:
@@ -469,12 +469,12 @@ GameObject:
   - component: {fileID: 2228669710070863795}
   - component: {fileID: 5644850094377497744}
   - component: {fileID: 2021963313737109480}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: egypt_isle_rocks_lp.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &2228669710070863795
 Transform:
@@ -550,12 +550,12 @@ GameObject:
   - component: {fileID: 2911932518720798093}
   - component: {fileID: 5242841041160484801}
   - component: {fileID: 2053614387434897210}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: egypt_isle_rocks_lp.010
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &2911932518720798093
 Transform:
@@ -631,12 +631,12 @@ GameObject:
   - component: {fileID: 5025920820406734682}
   - component: {fileID: 4051660155747396320}
   - component: {fileID: 1031931323346217023}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: egypt_isle_rocks_lp.019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &5025920820406734682
 Transform:
@@ -712,12 +712,12 @@ GameObject:
   - component: {fileID: 5101007914695270060}
   - component: {fileID: 3182967313204211677}
   - component: {fileID: 3030721254880148800}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: egypt_isle_rocks_lp.016
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &5101007914695270060
 Transform:
@@ -793,12 +793,12 @@ GameObject:
   - component: {fileID: 8306956764350513150}
   - component: {fileID: 8263840123635360774}
   - component: {fileID: 4350022597638535240}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: egypt_isle_rocks_lp.007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &8306956764350513150
 Transform:
@@ -874,12 +874,12 @@ GameObject:
   - component: {fileID: 847930817823920202}
   - component: {fileID: 1606030513193077158}
   - component: {fileID: 3700936627123984466}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: egypt_isle_rocks_lp.022
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &847930817823920202
 Transform:
@@ -955,12 +955,12 @@ GameObject:
   - component: {fileID: 3294076518247445161}
   - component: {fileID: 6887397600287269797}
   - component: {fileID: 9079146949793631629}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: egypt_isle_rocks_lp.018
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &3294076518247445161
 Transform:
@@ -1036,12 +1036,12 @@ GameObject:
   - component: {fileID: 3732051344908500949}
   - component: {fileID: 357989081286945532}
   - component: {fileID: 3199290989125862904}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: egypt_isle_rocks_lp.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &3732051344908500949
 Transform:
@@ -1117,12 +1117,12 @@ GameObject:
   - component: {fileID: 5655325508815641396}
   - component: {fileID: 4604366395679394228}
   - component: {fileID: 2997587869798012848}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: egypt_isle_rocks_lp.009
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &5655325508815641396
 Transform:
@@ -1198,12 +1198,12 @@ GameObject:
   - component: {fileID: 3964947573104151428}
   - component: {fileID: 2916768038977836381}
   - component: {fileID: 9045033639033720464}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: egypt_isle_rocks_lp.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &3964947573104151428
 Transform:
@@ -1279,13 +1279,13 @@ GameObject:
   - component: {fileID: 7384934989253909222}
   - component: {fileID: 3774499225359609445}
   - component: {fileID: 8299955563688735592}
-  - component: {fileID: 1304823483}
-  m_Layer: 0
+  - component: {fileID: 1048524976}
+  m_Layer: 10
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &7384934989253909222
 Transform:
@@ -1350,14 +1350,14 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &1304823483
+--- !u!64 &1048524976
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5663644930648707783}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 0a6a2021bd1fcf546ad3ebcf6789fc93, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
@@ -1375,12 +1375,12 @@ GameObject:
   - component: {fileID: 3529941441624539049}
   - component: {fileID: 5298137236485834376}
   - component: {fileID: 8426141378570803253}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: egypt_isle_rocks_lp.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &3529941441624539049
 Transform:
@@ -1456,12 +1456,12 @@ GameObject:
   - component: {fileID: 2169436669565566615}
   - component: {fileID: 6250052164576044766}
   - component: {fileID: 7065686726775794}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: egypt_isle_rocks_lp.008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &2169436669565566615
 Transform:
@@ -1537,12 +1537,12 @@ GameObject:
   - component: {fileID: 2131303358194346700}
   - component: {fileID: 6846890449751399335}
   - component: {fileID: 412424363101811599}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: egypt_isle_rocks_lp.013
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &2131303358194346700
 Transform:
@@ -1618,12 +1618,12 @@ GameObject:
   - component: {fileID: 5265487736392583470}
   - component: {fileID: 8876074208098882783}
   - component: {fileID: 8603716702958938768}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: egypt_isle_rocks_lp.012
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &5265487736392583470
 Transform:
@@ -1699,12 +1699,12 @@ GameObject:
   - component: {fileID: 6256649787381992461}
   - component: {fileID: 1303766876635329957}
   - component: {fileID: 2443519467357523689}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: egypt_isle_rocks_lp.014
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &6256649787381992461
 Transform:
@@ -1780,12 +1780,12 @@ GameObject:
   - component: {fileID: 4428254654515995619}
   - component: {fileID: 6318025042949984215}
   - component: {fileID: 8521647018088042584}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: egypt_isle_rocks_lp.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &4428254654515995619
 Transform:
@@ -1861,12 +1861,12 @@ GameObject:
   - component: {fileID: 7525013248992846964}
   - component: {fileID: 7566330269871488028}
   - component: {fileID: 8532801896474477607}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: egypt_isle_rocks_lp.015
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &7525013248992846964
 Transform:
