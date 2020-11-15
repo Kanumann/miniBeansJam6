@@ -1,28 +1,41 @@
 ﻿using System;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
 
 public class IngameUI : MonoBehaviour
 {
+    public GameObject IGMenu;
     public GameObject UIText;
-    public GameObject UImgHeavy;
-    public GameObject UImgFeather;
-    public GameObject UImgAlarm;
+    public GameObject UIZone;
+    public GameObject EndMenu;
+    public GameObject UIEndText;
     public bool Running = true;
-    public int decimals = 2;
+    public int decimals = 1;
 
-    private TextMeshProUGUI text;
-    private Image rImgHeavy;
-    private Image rImgFeather;
-    private Image rImgAlarm;
+    // TODO STEVEN
+    public float ZoneValue;
+
+    private GameManager instance;
+    private TextMeshProUGUI textIG;
+    private TextMeshProUGUI textEnd;
+    private TextMeshProUGUI textZone;
     private float score = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        text = UIText.GetComponent<TextMeshProUGUI>();
-        Reset();
+        // Hackermann war hier
+        var list = FindObjectsOfType<GameManager>();
+        if (list.Length > 1) throw new Exception("IngameUI error: found too many GammeManagers!");
+        instance = list[0];
+
+        textIG = UIText.GetComponent<TextMeshProUGUI>();
+        textEnd = UIEndText.GetComponent<TextMeshProUGUI>();
+
+        // get zone
+        textZone = UIZone.GetComponent<TextMeshProUGUI>();
+        SetText();
     }
 
     // Update is called once per frame
@@ -30,18 +43,29 @@ public class IngameUI : MonoBehaviour
     {
         if (!Running) return;
         score += Time.deltaTime;
-        text.SetText(FormatTime(score));
+        SetText();
+    }
+
+    private void SetText()
+    {
+        string formatted = FormatTime(score);
+        textIG.SetText(formatted);
+        textEnd.SetText(formatted);
+
+        // set zone
+        textZone.SetText(FormatTime(ZoneValue));
     }
 
     private string FormatTime(float s)
     {
-        int ms = (int) Math.Round((s - Math.Truncate(s)) * Math.Pow(10, decimals));
+        int ms = (int)Math.Round((s - Math.Truncate(s)) * Math.Pow(10, decimals));
         int sec = (int)s % 60;
         int min = (int)s / 60;
         int hrs = (int)min / 60;
         min = min % 60;
         return $"{min:00}:{sec:00},{ms}";
     }
+
 
 
     ///////////////////////////////////
@@ -51,24 +75,43 @@ public class IngameUI : MonoBehaviour
 
     public void Reset()
     {
-        text.SetText(FormatTime(score = 0));
+        score = 0;
+        SetText();
     }
 
-    // TODO TBD in GameManager?
+    public void ShowIGMenu(bool InGame = true)
+    {
+        IGMenu.SetActive(InGame);
+        EndMenu.SetActive(!InGame);
+    }
+
+    /*
     public void SetHeavy(bool visible)
     {
         UImgHeavy.SetActive(visible);
     }
-
-    // TODO TBD in GameManager?
     public void SetFeather(bool visible)
     {
         UImgFeather.SetActive(visible);
     }
-
-    // TODO TBD in GameManager?
     public void SetAlarm(bool visible)
     {
         UImgAlarm.SetActive(visible);
+    }
+    */
+
+    ///////////////////////////////////
+    /// PUBLIC API FOR UI BUTTONS
+    ///////////////////////////////////
+
+    public void ButtonRetry()
+    {
+        instance.StartGame();
+    }
+
+    public void ButtonExit()
+    {
+        // TODO using this?
+        SceneManager.LoadScene(0);
     }
 }
