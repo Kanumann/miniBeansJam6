@@ -5,17 +5,22 @@ using UnityEngine;
 public class AirDropSpawner : MonoBehaviour
 {
     public GameObject prfb_object;
-    public Transform parent;
-    public float min_time, max_time, spawn_radius, spawn_height;
-    public int max_objects;
+    public float min_time = 5f, max_time = 15f, spawn_radius = 18f, spawn_height = 20;
+    public int max_objects = 3;
     private int current_object_count;
     private float time, next_spawn_time;
 
-    public void OnEnabled()
+    public void Reset()
     {
         // Reset timer
         time = 0f;
-        next_spawn_time = Random.Range(min_time, max_time);
+        if (min_time >= max_time) next_spawn_time = min_time;
+        else next_spawn_time = Random.Range(min_time, max_time);
+    }
+
+    private void OnEnable()
+    {
+        Reset();
     }
 
     void FixedUpdate()
@@ -25,7 +30,7 @@ public class AirDropSpawner : MonoBehaviour
         if (time >= next_spawn_time)
         {
             Spawn();
-            OnEnabled();
+            Reset();
         }
     }
 
@@ -36,7 +41,7 @@ public class AirDropSpawner : MonoBehaviour
         Vector3 spawn_pos = new Vector3(random_2d_pos.x, spawn_height, random_2d_pos.y);
 
         // Spawn object
-        GameObject obj = Instantiate(prfb_object, spawn_pos, Quaternion.identity, parent);
+        GameObject obj = Instantiate(prfb_object, spawn_pos, Quaternion.identity);
         obj.GetComponent<DestroyOnFallOff>().onDestroy.AddListener(OnObjectDestroyed);
         current_object_count++;
 

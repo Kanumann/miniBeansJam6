@@ -7,21 +7,21 @@ public class GameManager : MonoBehaviour
     private Transform ball;
     private Vector3 initial_position;
     private Rigidbody ball_phy;
-    //private float time;
-    public GameObject EnemySpawnerGameObject;
     private EnemySpawner EnemySpawnerInstance;
+
+    public Transform staticLevelHelper;
+
     private void Start()
     {
         ball = GameObject.FindGameObjectWithTag("Player").transform;
         initial_position = ball.position;
         ball_phy = ball.GetComponent<Rigidbody>();
-        this.EnemySpawnerInstance = EnemySpawnerGameObject.GetComponent<EnemySpawner>();
-        InvokeRepeating("SpawnNewEnemy", 3, 3);
+        this.EnemySpawnerInstance = GetComponent<EnemySpawner>();
     }
 
-    private void SpawnNewEnemy(Vector3 position) {
-        Debug.LogWarning("Spawn new enemy");
-        EnemySpawnerInstance.Spawn(position, new Quaternion());
+    public GameObject RegisterNewEnemy(GameObject newRemoteEnemy)
+    {
+        return EnemySpawnerInstance.AddAiToRemoteEnemy(newRemoteEnemy);
     }
 
     void Update()
@@ -31,8 +31,5 @@ public class GameManager : MonoBehaviour
             ball_phy.velocity = Vector3.zero;
             ball.position = initial_position;
         }
-
-        //time += Time.deltaTime;
-        //ball_phy.mass = (time + 1) / 10f;
     }
 }
