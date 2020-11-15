@@ -78,7 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01f58ac41c42df34c99dbb912e8bc13c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vfx_movement_effect: {fileID: 0}
+  vfx_movement_effect: {fileID: 9008249932559119788}
   vfx_speed_modifier: 1
 --- !u!114 &7150297687233223784
 MonoBehaviour:
