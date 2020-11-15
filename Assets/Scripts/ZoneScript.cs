@@ -31,7 +31,7 @@ public class ZoneScript : MonoBehaviour
     {
         zone.transform.localPosition = new Vector3(position.x, y_offset, position.y);
         radius = radius / DEFAULT_OBJ_RADIUS;
-        zone.localScale = new Vector3(radius, 1f, radius);
+        zone.localScale = new Vector3(radius, radius, 1f);
     }
 
     void OnZoneReached()
