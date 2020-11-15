@@ -193,9 +193,9 @@ public class AudioManager : MonoBehaviour
         instance.release();
     }
 
-    public void SetGlobalParameter(string parameterName, float parameterValue)
+    public bool SetGlobalParameter(string parameterName, float parameterValue)
     {
-        FMODUnity.RuntimeManager.StudioSystem.setParameterByName(parameterName, parameterValue);
+        return CheckError(FMODUnity.RuntimeManager.StudioSystem.setParameterByName(parameterName, parameterValue));
     }
 
     public FMOD.RESULT PostEvent(string fmodEvent, out FMOD.Studio.EventInstance musicInstance, GameObject gameObject = null)
