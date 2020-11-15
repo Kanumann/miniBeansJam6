@@ -8,19 +8,18 @@ public enum EnemyState {
 
 public class EnemyAI : MonoBehaviour
 {
-    // TODO(Jonas): Overwrite maxDistanceToHit depending on player and enemy size
-    public float maxDistanceToHit = 1.1f;
-    public float hitStrength = 20f;
-    public float howLongToWait = 2f;
-    public float checkForRespawnInterval = 2f;
-    public float predictVelocity = 0.1f;
-    public EnemyState enemyState { get; private set; } 
-
+    public EnemyState enemyState { get; set; } 
+    public float maxDistanceToHit { get; set; } 
+    public float hitStrength { get; set; } 
+    public float howLongToWait { get; set; } 
+    public float checkForRespawnInterval { get; set; } 
+    public float predictVelocity { get; set; } 
+    public float aggressiveness { get; set; }
     // When enemy is engaging a new map target, pick a position to go to within this radius 
-    public float walkRadius = 10f;
+    public float walkRadius { get; set; }
     
     // on first run, wait longer
-    public float remainingWaitSeconds = 3f; 
+    private float remainingWaitSeconds = 0f; 
 
     private Vector3 OwnPosition { 
         get { return gameObject.transform.position; }
@@ -54,17 +53,17 @@ public class EnemyAI : MonoBehaviour
     }
 
     public void changeState(EnemyState state) {
+        this.enemyState = state;
         switch (state) {
             case EnemyState.CHASING_PLAYER: 
                 break;
             case EnemyState.ENGAGING_MAP_TARGET:
-                MapTargetPosition = getRandomPositionOnNavMesh(); 
+                navAgent.destination = getRandomPositionOnNavMesh();
                 break;
             case EnemyState.WAITING:
-                remainingWaitSeconds += howLongToWait; 
+                remainingWaitSeconds += howLongToWait;
                 break;
         }
-        this.enemyState = state;
     }
 
     void Update() {
@@ -73,10 +72,12 @@ public class EnemyAI : MonoBehaviour
                 chasePlayer();
                 break;
             case EnemyState.ENGAGING_MAP_TARGET:
+
                 engageMapTarget();
                 break;
             case EnemyState.WAITING:
-                return;
+                wait();
+                break;
         }
     }
 
@@ -85,8 +86,10 @@ public class EnemyAI : MonoBehaviour
         if (remainingWaitSeconds > 0) {
             remainingWaitSeconds -= Time.deltaTime;
         } else {
-            // TODO(Jonas): chase player or go to random location based on what condition?
-            changeState(EnemyState.CHASING_PLAYER);
+            if (Random.value <= aggressiveness)
+                changeState(EnemyState.CHASING_PLAYER);
+            else
+                changeState(EnemyState.ENGAGING_MAP_TARGET);
         }
     }
 
@@ -97,16 +100,19 @@ public class EnemyAI : MonoBehaviour
         // Hit target if close enough
         if (DistanceToPlayer() <= maxDistanceToHit) {
             HitPlayer();
-            remainingWaitSeconds = howLongToWait;
             changeState(EnemyState.WAITING);
         }
     }
 
     private void engageMapTarget() {
-        navAgent.destination = MapTargetPosition;
-        // start wating when map target is reached
-        if (navAgent.pathStatus == NavMeshPathStatus.PathComplete)
+        // Check if enemy has reached map target
+        if (!navAgent.pathPending &&
+            navAgent.remainingDistance <= navAgent.stoppingDistance &&
+            (!navAgent.hasPath || navAgent.velocity.sqrMagnitude == 0f))
+        {
+            // start wating when map target is reached
             changeState(EnemyState.WAITING);
+        }
     }
 
     private float DistanceToPlayer() {
