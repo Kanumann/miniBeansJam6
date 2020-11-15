@@ -360,7 +360,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1757494853}
         m_TargetAssemblyTypeName: IngameUI, Assembly-CSharp
         m_MethodName: ButtonRetry
         m_Mode: 1
@@ -850,7 +850,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1757494853}
         m_TargetAssemblyTypeName: IngameUI, Assembly-CSharp
         m_MethodName: ButtonExit
         m_Mode: 1
