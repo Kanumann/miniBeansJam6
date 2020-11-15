@@ -13,12 +13,12 @@ GameObject:
   - component: {fileID: 5940387024866778362}
   - component: {fileID: 6168894034086245488}
   - component: {fileID: 505667739997379528}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Prefab_Egypt_Environment_Obelisk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &4772498777193441173
 Transform:
@@ -27,7 +27,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5291873558373973295}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.46, y: 11.94, z: -7.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 313c358893c34b243a0e84ca27cb5131, type: 3}
+  - {fileID: 2100000, guid: c30c67b44a8d9514a94a8470675dbd67, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
