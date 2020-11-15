@@ -56,6 +56,8 @@ public class PlayerAudio : MonoBehaviour
     {
         if (collider.tag == "Slowing") AudioManager.Instance.PlayOneShot("event:/World/Trigger1", this.gameObject);
         if (collider.tag == "Accelerating") AudioManager.Instance.PlayOneShot("event:/World/Trigger2", this.gameObject);
+
+        if (collider.gameObject.CompareTag("AudioTrigger")) AudioManager.Instance.SetGlobalParameter("g_musicStinger", 1f);
     }
 
     void OnCollisionEnter(Collision col)
