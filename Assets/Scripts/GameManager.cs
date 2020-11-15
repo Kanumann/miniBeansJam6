@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,12 +9,20 @@ public class GameManager : MonoBehaviour
 
     public Transform staticLevelHelper;
 
+    public GameObject UIScriptHolder;
+
+
+    private IngameUI ingameUI;
+
     private void Start()
     {
         ball = GameObject.FindGameObjectWithTag("Player").transform;
         initial_position = ball.position;
         ball_phy = ball.GetComponent<Rigidbody>();
-        this.EnemySpawnerInstance = GetComponent<EnemySpawner>();
+        EnemySpawnerInstance = GetComponent<EnemySpawner>();
+
+        // get ingame ui control script
+        ingameUI = UIScriptHolder.GetComponent<IngameUI>();
     }
 
     public GameObject RegisterNewEnemy(GameObject newRemoteEnemy)
@@ -31,5 +37,31 @@ public class GameManager : MonoBehaviour
             ball_phy.velocity = Vector3.zero;
             ball.position = initial_position;
         }
+    }
+
+
+    //////////////////////////////
+    // GAME FLOW
+    //////////////////////////////
+
+
+    /// <summary>
+    /// Delete all enemys, etc. Open score screen
+    /// </summary>
+    public void EndGame()
+    {
+        foreach (var enemy in GameObject.FindGameObjectsWithTag("Enemy"))
+            Destroy(enemy);
+
+        ingameUI.Running = false;
+        ingameUI.ShowIGMenu(false);
+    }
+
+
+    public void StartGame()
+    {
+        ingameUI.Reset();
+        ingameUI.ShowIGMenu();
+        ingameUI.Running = true;
     }
 }
