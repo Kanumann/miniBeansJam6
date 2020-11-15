@@ -21,7 +21,7 @@ public class PlayerAudio : MonoBehaviour
     void Update()
     {
 
-        _ = GroundCheck() ? AudioManager.Instance.SetGlobalParameter("g_ballSpeed", rb.velocity.magnitude) 
+        _ = GroundCheck() ? AudioManager.Instance.SetGlobalParameter("g_ballSpeed", rb.velocity.magnitude)
                           : AudioManager.Instance.SetGlobalParameter("g_ballSpeed", 0f);
     }
 
@@ -37,4 +37,13 @@ public class PlayerAudio : MonoBehaviour
         if (collider.tag == "Slowing") AudioManager.Instance.PlayOneShot("event:/World/Trigger1", this.gameObject);
         if (collider.tag == "Accelerating") AudioManager.Instance.PlayOneShot("event:/World/Trigger2", this.gameObject);
     }
+
+    void OnCollisionEnter(Collision col)
+    {
+        if (col.gameObject.name == "StaticLevel" && col.impulse.magnitude > 10f)
+        {
+            AudioManager.Instance.PlayOneShot("event:/Player/Land", this.gameObject);
+        }
+    }
+
 }

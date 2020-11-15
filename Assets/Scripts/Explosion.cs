@@ -66,6 +66,9 @@ public class Explosion : MonoBehaviour
         // Animation
         animator.SetTrigger("triggered");
 
+        // Sound
+        AudioManager.Instance.PlayOneShot("event:/World/Explosion", this.gameObject);
+
         // delay
         Invoke("Explode", delay);
     }

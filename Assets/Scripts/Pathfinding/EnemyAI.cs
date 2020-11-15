@@ -21,6 +21,7 @@ public class EnemyAI : MonoBehaviour
          get { return localTarget.transform.position; } 
     }
 
+    private GameObject player;
 
     // TODO(Jonas): Overwrite maxDistanceToHit depending on player 
     //            :and enemy size
@@ -31,7 +32,7 @@ public class EnemyAI : MonoBehaviour
     private float waitSeconds = 3f; // on first run, wait longer
 
     void Start() {
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        player = GameObject.FindGameObjectWithTag("Player");
         localTarget = player.GetComponent<SyncRemoteObject>().remote_object.gameObject;
 
         remoteRigid = player.GetComponent<Rigidbody>();
@@ -73,6 +74,7 @@ public class EnemyAI : MonoBehaviour
         directionToPlayer.y = 1f;
         directionToPlayer.Normalize();
         remoteRigid.AddForce(directionToPlayer * hitStrength, ForceMode.Impulse);
+        AudioManager.Instance.PlayOneShot("event:/World/Hit", player);
     }
 
     private void RespawnEnemyIfFallenOff() {
