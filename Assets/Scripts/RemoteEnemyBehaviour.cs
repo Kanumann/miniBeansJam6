@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class RemoteEnemyBehaviour : MonoBehaviour
 {
@@ -24,7 +25,6 @@ public class RemoteEnemyBehaviour : MonoBehaviour
 
     private void OnDestroy()
     {
-        Debug.Log("Enemy died!");
         Destroy(pathFinderAI);
     }
 }
