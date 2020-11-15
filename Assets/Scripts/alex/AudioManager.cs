@@ -11,6 +11,7 @@ public enum MusicState
 public class AudioManager : MonoBehaviour
 {
     bool audioResumed = false;
+    bool started = false;
 
     [SerializeField]
     bool debug = false;
@@ -71,21 +72,25 @@ public class AudioManager : MonoBehaviour
 
     public bool InitializeAudio()
     {
-        if (!FixWebGLAudio())
+        if (!started)
         {
-            return false;
-        }
+            if (!FixWebGLAudio())
+            {
+                return false;
+            }
 
-        if (!GetVCAVolumes())
-        {
-            return false;
-        }
+            if (!GetVCAVolumes())
+            {
+                return false;
+            }
 
-        if (!StartMusic())
-        {
-            return false;
-        }
+            if (!StartMusic())
+            {
+                return false;
+            }
 
+            started = true;
+        }
         return true;
     }
 
