@@ -10,6 +10,7 @@ TagManager:
   - Slowing
   - Accelerating
   - Ground
+  - AudioTrigger
   layers:
   - Default
   - TransparentFX

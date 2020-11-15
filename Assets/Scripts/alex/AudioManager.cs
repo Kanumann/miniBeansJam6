@@ -1,33 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 
 public enum MusicState
 {
     Start = 0,
     Transition = 1
-}
-
-[CustomEditor(typeof(AudioManager))]
-public class AudioManagerEditor : UnityEditor.Editor
-{
-    public override void OnInspectorGUI()
-    {
-        if (GUILayout.Button("Start Parameter", EditorStyles.miniButton))
-        {
-
-            AudioManager myTarget = (AudioManager)target;
-            myTarget.SetGlobalParameter("g_musicState", (float)MusicState.Start);
-        }
-        if (GUILayout.Button("Transition Parameter", EditorStyles.miniButton))
-        {
-
-            AudioManager myTarget = (AudioManager)target;
-            myTarget.SetGlobalParameter("g_musicState", (float)MusicState.Transition);
-        }
-        DrawDefaultInspector();
-    }
 }
 
 public class AudioManager : MonoBehaviour
