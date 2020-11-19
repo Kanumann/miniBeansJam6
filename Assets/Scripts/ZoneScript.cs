@@ -50,6 +50,8 @@ public class ZoneScript : MonoBehaviour
             current_local_pos = new Vector2(zone.localPosition.x, zone.localPosition.z);
         }
 
+        AudioManager.Instance.PlayOneShot("event:/World/Trigger", this.gameObject);
+
         // Spawn new
         SpawnZone(new_pos, zone_radius);
     }
